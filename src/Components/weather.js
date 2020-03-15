@@ -1,52 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import WeatherIcon from 'react-icons-weather';
 import '../App.css';
-
-var temp = {
-    "coord": {
-        "lon": 80.28,
-        "lat": 13.09
-    },
-    "weather": [
-        {
-            "id": 802,
-            "main": "Clouds",
-            "description": "scattered clouds",
-            "icon": "03d"
-        }
-    ],
-    "base": "stations",
-    "main": {
-        "temp": 304.97,
-        "feels_like": 306.53,
-        "temp_min": 303.71,
-        "temp_max": 306.15,
-        "pressure": 1010,
-        "humidity": 59
-    },
-    "visibility": 6000,
-    "wind": {
-        "speed": 5.1,
-        "deg": 100
-    },
-    "clouds": {
-        "all": 40
-    },
-    "dt": 1584269337,
-    "sys": {
-        "type": 1,
-        "id": 9218,
-        "country": "IN",
-        "sunrise": 1584233178,
-        "sunset": 1584276560
-    },
-    "timezone": 19800,
-    "id": 1264527,
-    "name": "Chennai",
-    "cod": 200
-}
 
 function Weather(props) {
     const { responseData: { name, weather, main, sys,coord,wind,clouds,visibility }, degress } = props
